@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby PWA Project`,
+    description: `A test project using Gatsby to test out a PWA, with offline support and push notifications.`,
+    author: `@thewagener`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,9 +18,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
+        name: `gatsby-pwa-test`,
+        short_name: `Gatsby PWA Test`,
+        start_url: `/gatsby_pwa_project`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
@@ -29,6 +29,21 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+{
+    resolve: `gatsby-plugin-firebase-messaging`,
+    options: {
+      //required unless removeFirebaseServiceWorker == true
+      config: { 
+        apiKey: 'AIzaSyA5ig6PAu2aoAd-TVnR5pfF8p4QgbjtLr4',
+        appId: '1:979760629927:web:d9b520edde936d20397382',
+        messagingSenderId: '979760629927',
+        projectId: 'gatsby-pwa-test-project',
+      },
+      //both of these are optional
+     // disableDevelopment: true, //disables development service worker
+     // removeFirebaseServiceWorker: true, //tells plugin to help unregistering/removing
+    },
+  },
   ],
 }
