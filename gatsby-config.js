@@ -35,9 +35,9 @@ module.exports = {
     options: {
       //required unless removeFirebaseServiceWorker == true
       config: { 
-        apiKey: 'AIzaSyA5ig6PAu2aoAd-TVnR5pfF8p4QgbjtLr4',
-        appId: '1:979760629927:web:d9b520edde936d20397382',
-        messagingSenderId: '979760629927',
+        apiKey: '111111111111111111111',
+        appId: '111111111111111111111',
+        messagingSenderId: '111111111111111111111',
         projectId: 'gatsby-pwa-test-project',
       },
       //both of these are optional
