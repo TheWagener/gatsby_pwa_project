@@ -20,7 +20,7 @@ module.exports = {
       options: {
         name: `gatsby-pwa-test`,
         short_name: `Gatsby PWA Test`,
-        start_url: `/gatsby_pwa_project`,
+        start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
